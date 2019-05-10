@@ -1,6 +1,7 @@
 /*
   Object.assign
     Merges multiple objects
+    IMPORTANT: This does not perform a deep merge. For deep merging I suggest using lodash.
 
   Arguments to use this:
     - Useful for cloning objects
@@ -19,7 +20,10 @@ objectA.c = objectB.c;
 
 // *** NEW ***
 
-Object.assign(objectA, objectB);
 const objectA = { a: 1, b: 2 };
-const objectB = Object.assign({}, objectA);
+const objectB = { b: 3, c: 4 };
+Object.assign(objectA, objectB);
+
+// Clones the object
+const objectC = Object.assign({}, objectA);
 

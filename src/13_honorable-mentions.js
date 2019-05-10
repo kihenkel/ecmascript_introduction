@@ -2,9 +2,8 @@
   Default function params
 */
 
-const getPrograms = (programIds, limit = 10) => {
-  return httpService.post('https://www.google.com', { programIds, limit });
-};
+const getPrograms = (programIds, limit = 10) =>
+  httpService.post('https://www.google.com', { programIds, limit });
 
 /*
   class

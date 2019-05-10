@@ -25,7 +25,7 @@ getPerson()
 q.all([
   getPersons,
   getPrograms,
-  getRanks
+  getRanks,
 ])
   .then((results) => {
     const persons = results[0];
@@ -47,7 +47,7 @@ getPerson()
 q.all([
   getPersons,
   getPrograms,
-  getRanks
+  getRanks,
 ])
   .then(([persons, programs, ranks]) => {
     process(persons, programs, ranks);

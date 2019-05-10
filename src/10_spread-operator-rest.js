@@ -1,5 +1,6 @@
 /*
   spread operator / rest parameters
+    - "Spreads" properties of an object onto a new object
 
   Arguments to use this:
     - Can save you lines of code and time
@@ -22,10 +23,10 @@ const submitPerson = (person) => {
 
 const submitPerson = (person) => {
   const personPayload = {
-    age: 5,
+    age: 5, // BEFORE spread: If person contains property age it will overwrite this property
     ...person,
-    birthday: new Date(),
+    birthday: new Date(), // AFTER spread: If person contains property birthday it will be overwritten by this property
   };
-  httpService.post('https://www.google.com', person);
+  httpService.post('https://www.google.com', personPayload);
 };
 

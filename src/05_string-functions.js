@@ -33,7 +33,6 @@ if (name.startsWith('John')) {
   console.log('He has a first name!');
 }
 
-const lastName = 'Doe';
-if (name.endsWith(lastName)) {
+if (name.endsWith('Doe')) {
   console.log('He has a last name!');
 }

@@ -45,4 +45,4 @@ const getPerson = (personId) => {
 };
 
 getPerson().then().catch().finally();
-Promise.all([getPerson(), getPerson()]).then()
+Promise.all([getPerson(), getPerson()]).then().catch();

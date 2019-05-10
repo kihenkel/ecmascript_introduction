@@ -11,13 +11,14 @@
 // *** OLD ***
 
 const doSomething = () => {
-  let variable;
-  getPersons()
-    .then((persons) => {
-      return get(persons);
+  let programName;
+  return getProgram()
+    .then((program) => {
+      programName = program.name;
+      return getPersonsByProgramId(program.id);
     })
     .then((persons) => {
-      doSomethingElse(persons);
+      processPersons(persons, programName);
     })
     .catch(() => {
       // handle error
@@ -28,10 +29,11 @@ const doSomething = () => {
 
 const doSomething = async () => {
   try {
-    const persons = await getPerson();
-    doSomethingElse(persons);
+    const program = await getProgram();
+    const persons = await getPersonsByProgramId(program.id);
+    processPersons(persons, program.name);
   } catch (error) {
-    
+    // handle error
   }
 };
 
